@@ -25,6 +25,12 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff;
 }
 
 main {
@@ -40,14 +46,10 @@ main {
     padding: 4rem 0;
 }
 
-/* Add this at the end of your style.css */
-
-
-
 .hero-photo {
-    width: auto; /* Let the height determine the scale */
-    height: 150px; /* Scale the image to the container's height */
-    object-fit: cover; /* Cover the container */
+    width: auto;
+    height: 150px;
+    object-fit: cover;
 }
 
 .hero-content {
@@ -82,10 +84,12 @@ main {
     border-radius: 5px;
     margin-top: 1rem;
     display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta:hover {
     background-color: #0056b3;
+    transform: translateY(-3px);
 }
 
 #skills {
@@ -102,11 +106,16 @@ main {
 .skill {
     margin: 1rem;
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .skill img {
     width: 50px;
     height: 50px;
+}
+
+.skill:hover {
+    transform: scale(1.1);
 }
 
 #featured-projects {
@@ -117,6 +126,7 @@ main {
     margin: 1rem 0;
     display: flex;
     align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project img {
@@ -125,12 +135,19 @@ main {
     margin-right: 1rem;
 }
 
+.project:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .project-link {
     color: #007bff;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .project-link:hover {
+    color: #0056b3;
     text-decoration: underline;
 }
 
@@ -145,6 +162,12 @@ main {
     background-color: #f9f9f9;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 footer {
@@ -158,40 +181,12 @@ footer .social-links a {
     color: white;
     margin: 0 0.5rem;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 footer .social-links a:hover {
-    text-decoration: underline;
+    color: #007bff;
 }
-
-
-/* Animations for elements appearing into view */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero-content, .skills-container, .project, .testimonial {
-    animation: fadeInUp 1s ease-in-out;
-}
-
-/* Hover effects for buttons and links */
-.cta, .project-link {
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.cta:hover, .project-link:hover {
-    background-color: #0056b3;
-    transform: translateY(-3px);
-}
-
-/* Add this at the end of your style.css */
 
 input:invalid, textarea:invalid {
     border-color: red;
@@ -201,9 +196,6 @@ input:valid, textarea:valid {
     border-color: green;
 }
 
-/* Add this at the end of your style.css */
-
-/* Styles for the contact form */
 #contact {
     margin: 2rem 0;
     text-align: center;
@@ -233,8 +225,8 @@ input:valid, textarea:valid {
 }
 
 #contact-form textarea {
-    resize: vertical; /* Allows vertical resizing but restricts horizontal resizing */
-    height: 200px; /* Adjust the height as needed */
+    resize: vertical;
+    height: 200px;
 }
 
 #contact-form button {
@@ -273,6 +265,12 @@ input:valid, textarea:valid {
     height: 300px;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-photo img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .about-content {
@@ -303,6 +301,12 @@ input:valid, textarea:valid {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .skills-list img {
@@ -330,6 +334,7 @@ input:valid, textarea:valid {
     margin-bottom: 2rem;
     padding-left: 40px;
     position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .timeline li:before {
@@ -343,6 +348,11 @@ input:valid, textarea:valid {
     background: #007bff;
 }
 
+.timeline li:hover {
+    transform: translateX(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .timeline h3 {
     margin: 0;
     font-size: 1.2rem;
@@ -354,25 +364,21 @@ input:valid, textarea:valid {
     color: #777;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-footer .social-links a {
-    color: white;
-    margin: 0 0.5rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.hero-content, .skills-container, .project, .testimonial {
+    animation: fadeInUp 1s ease-in-out;
 }
 
-footer .social-links a:hover {
-    color: #007bff;
-}
-
-/* Responsive design */
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column;
@@ -399,4 +405,71 @@ footer .social-links a:hover {
     .timeline li:before {
         left: 0;
     }
+}
+#projects {
+    padding: 2rem 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.filters {
+    margin-bottom: 2rem;
+}
+
+.filters button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.filters button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h2 {
+    font-family: 'Poppins', sans-serif;
+    margin: 1rem 0 0.5rem;
+}
+
+.project-card p {
+    padding: 0 1rem;
+}
+
+.project-card a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+    color: #0056b3;
 }
