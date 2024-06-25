@@ -2,12 +2,28 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: #dbd8e3;
+}
+main{
+    background-image: url('../../images/background-img.jpg'); /* Path to your background image */
+    height: auto;
+    width: auto;
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    display: inline-block;
+    padding: 2rem;
+    border-radius: 10px;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 1rem 0;
+    background: linear-gradient(87.4deg, #5c5470 1.9%, #352f44 49.7%, #2a2438 100.5%);    padding: 1rem 0;
 }
 
 nav ul {
@@ -38,7 +54,6 @@ main {
 }
 
 #hero {
-    background-image: url('images/hero-background.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -46,14 +61,8 @@ main {
     padding: 4rem 0;
 }
 
-.hero-photo {
-    width: auto;
-    height: 150px;
-    object-fit: cover;
-}
-
 .hero-content {
-    background: rgba(0, 0, 0, 0.5);
+    background: #352f44;
     display: inline-block;
     padding: 2rem;
     border-radius: 10px;
@@ -95,6 +104,8 @@ main {
 #skills {
     text-align: center;
     margin: 2rem 0;
+    background-color: #dbd8e3;
+    padding-bottom: 1rem;
 }
 
 .skills-container {
@@ -120,6 +131,9 @@ main {
 
 #featured-projects {
     margin: 2rem 0;
+    background-color: #dbd8e3;
+    color:black;
+    padding: 1rem;
 }
 
 .project {
@@ -171,7 +185,7 @@ main {
 }
 
 footer {
-    background-color: #333;
+    background: linear-gradient(87.4deg, #5c5470 1.9%, #352f44 49.7%, #2a2438 100.5%);    padding: 1rem 0;
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -188,66 +202,10 @@ footer .social-links a:hover {
     color: #007bff;
 }
 
-input:invalid, textarea:invalid {
-    border-color: red;
-}
-
-input:valid, textarea:valid {
-    border-color: green;
-}
-
-#contact {
-    margin: 2rem 0;
-    text-align: center;
-}
-
-#contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#contact-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    text-align: left;
-}
-
-#contact-form input,
-#contact-form textarea {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-}
-
-#contact-form textarea {
-    resize: vertical;
-    height: 200px;
-}
-
-#contact-form button {
-    background-color: #007bff;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-#contact-form button:hover {
-    background-color: #0056b3;
-    transform: translateY(-3px);
-}
-
 #about-me {
     padding: 2rem 0;
-    background-color: #f9f9f9;
+    background-color: #dbd8e3;
+    color: black;
 }
 
 .about-container {
@@ -258,8 +216,17 @@ input:valid, textarea:valid {
     margin: 0 auto;
     gap: 2rem;
 }
+.about-photo {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1rem;
+}
 
 .about-photo img {
+    filter:  brightness(100%) contrast(100%) grayscale(10%) saturate(100%) sepia(0%);
+    margin:10px;
+    background: linear-gradient(to bottom, #dbd8e3 0%, #5c5470 100%), radial-gradient(at top center, #352f44 0%, rgba(0,0,0,0.40) 120%) #2a2438;
     border-radius: 30%;
     width: 200px;
     height: 300px;
@@ -276,6 +243,13 @@ input:valid, textarea:valid {
 .about-content {
     flex: 1;
     max-width: 600px;
+    background-color: white;
+    padding: 1rem;
+}
+#experience {
+    margin-top: 1rem;
+    background-color: white;
+    padding: 1rem;
 }
 
 .about-content h1, .about-content h2 {
@@ -408,7 +382,7 @@ input:valid, textarea:valid {
 }
 #projects {
     padding: 2rem 0;
-    background-color: #f9f9f9;
+    background-color: #dbd8e3;
     text-align: center;
 }
 
@@ -438,6 +412,7 @@ input:valid, textarea:valid {
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    color: black;
 }
 
 .project-card {
