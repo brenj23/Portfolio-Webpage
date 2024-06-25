@@ -141,13 +141,14 @@ main {
 .project {
     margin: 1rem 0;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: auto;
     margin-right: 1rem;
 }
 
