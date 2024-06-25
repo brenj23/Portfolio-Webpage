@@ -54,20 +54,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // function erase() {
-  //     if (charIndex > 0) {
-  //         currentText = textArray[textIndex].substring(0, charIndex - 1);
-  //         typedText.textContent = currentText;
-  //         charIndex--;
-  //         setTimeout(erase, typingSpeed);
-  //     } else {
-  //         textIndex++;
-  //         if (textIndex >= textArray.length) {
-  //             textIndex = 0;
-  //         }
-  //         setTimeout(type, typingSpeed);
-  //     }
-  // }
+  function erase() {
+      if (charIndex > 0) {
+          currentText = textArray[textIndex].substring(0, charIndex - 1);
+          typedText.textContent = currentText;
+          charIndex--;
+          setTimeout(erase, typingSpeed);
+      } else {
+          textIndex++;
+          if (textIndex >= textArray.length) {
+              textIndex = 0;
+          }
+          setTimeout(type, typingSpeed);
+      }
+  }
 
   type();
 });
